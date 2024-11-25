@@ -606,17 +606,6 @@
     
     
     <entry>
-      <title>个人介绍</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[<div class="note red icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p><strong>欢迎光临珈豪の学习仓库！！！</strong></p></div><p>本人就读于南京大学软件学院，该博客中将会持续发布面试必需的重点专业课知识以及面向就业的必备能力，希望大家能够收藏并且持续关注……</p><p>此网站一方面是为了记录自己的成长之路，另一方面也是鼓励大家坚持做自己所热爱的东西，让我们携手前行，遇见更好的自己！</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -633,6 +622,17 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人介绍</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="note red icon-padding simple"><i class="note-icon fas fa-bullhorn"></i><p><strong>欢迎光临珈豪の学习仓库！！！</strong></p></div><p>本人就读于南京大学软件学院，该博客中将会持续发布面试必需的重点专业课知识以及面向就业的必备能力，希望大家能够收藏并且持续关注……</p><p>此网站一方面是为了记录自己的成长之路，另一方面也是鼓励大家坚持做自己所热爱的东西，让我们携手前行，遇见更好的自己！</p>]]></content>
       
     </entry>
     
