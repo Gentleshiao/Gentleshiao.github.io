@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>后端框架经典面试题 | 珈豪の学习仓库</title><meta name="author" content="Shi Jiahao"><meta name="copyright" content="Shi Jiahao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="关于后端框架的相关经典面试题，包括Spring、SpringBoot、MyBatis框架。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后端框架经典面试题">
+<meta property="og:url" content="http://gentleshiao.github.io/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="珈豪の学习仓库">
+<meta property="og:description" content="关于后端框架的相关经典面试题，包括Spring、SpringBoot、MyBatis框架。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://gentleshiao.github.io/img/web.jpg">
+<meta property="article:published_time" content="2025-03-16T13:22:01.000Z">
+<meta property="article:modified_time" content="2025-03-16T14:29:04.223Z">
+<meta property="article:author" content="Shi Jiahao">
+<meta property="article:tag" content="后端">
+<meta property="article:tag" content="Spring">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://gentleshiao.github.io/img/web.jpg"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://gentleshiao.github.io/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '后端框架经典面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-16 22:29:04'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1000;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+2000;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐（暂未开放）</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-photo-video"></i><span> 图片（暂未开放）</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/web.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="珈豪の学习仓库"><span class="site-name">珈豪の学习仓库</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其他</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐（暂未开放）</span></a></li><li><a class="site-page child" href="/photo/"><i class="fa-fw fas fa-photo-video"></i><span> 图片（暂未开放）</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">后端框架经典面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-16T13:22:01.000Z" title="发表于 2025-03-16 21:22:01">2025-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-16T14:29:04.223Z" title="更新于 2025-03-16 22:29:04">2025-03-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6/">后端框架</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="后端框架经典面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315103731399.png" alt="image-20250315103731399"></p>
+<h1 id="后端框架经典面试题"><a href="#后端框架经典面试题" class="headerlink" title="后端框架经典面试题"></a>后端框架经典面试题</h1><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><h3 id="单例bean是线程安全的吗"><a href="#单例bean是线程安全的吗" class="headerlink" title="单例bean是线程安全的吗"></a>单例bean是线程安全的吗</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315104052693.png" alt="image-20250315104052693"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315104255315.png" alt="image-20250315104255315"></p>
+<p>无状态的对象，即不可被修改的对象，是线程安全的</p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315104330761.png" alt="image-20250315104330761"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315104343147.png" alt="image-20250315104343147"></p>
+<h3 id="AOP相关面试题"><a href="#AOP相关面试题" class="headerlink" title="AOP相关面试题"></a>AOP相关面试题</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315144532175.png" alt="image-20250315144532175"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315144851234.png" alt="image-20250315144851234"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315145002677.png" alt="image-20250315145002677"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315145104427.png" alt="image-20250315145104427"></p>
+<h3 id="事务失效的场景"><a href="#事务失效的场景" class="headerlink" title="事务失效的场景"></a>事务失效的场景</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315145139277.png" alt="image-20250315145139277"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315145355172.png" alt="image-20250315145355172"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315154134531.png" alt="image-20250315154134531"></p>
+<p>Spring事务只会对RuntimeError异常进行回滚</p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315154236893.png" alt="image-20250315154236893"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315154342642.png" alt="image-20250315154342642"></p>
+<h3 id="bean的生命周期"><a href="#bean的生命周期" class="headerlink" title="bean的生命周期"></a>bean的生命周期</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315154435738.png" alt="image-20250315154435738"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315154843372.png" alt="image-20250315154843372"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315155043907.png" alt="image-20250315155043907"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315155540822.png" alt="image-20250315155540822"></p>
+<h3 id="bean的循环依赖（循环引用）"><a href="#bean的循环依赖（循环引用）" class="headerlink" title="bean的循环依赖（循环引用）"></a>bean的循环依赖（循环引用）</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315160931508.png" alt="image-20250315160931508"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315161025551.png" alt="image-20250315161025551"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315161129254.png" alt="image-20250315161129254"></p>
+<p>一级缓存作用：限制bean在beanFactory中只存一份，即实现singleton scope，解决不了循环依赖。</p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315161315162.png" alt="image-20250315161315162"></p>
+<p>一级和二级缓存可以解决一般的循环依赖，如果一个对象被增强，即代理对象，那么就需要三级缓存。</p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315161608202.png" alt="image-20250315161608202"></p>
+<p>三级缓存中的对象工厂可以帮助产生代理对象或者原始对象。</p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315170658992.png" alt="image-20250315170658992"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315170835376.png" alt="image-20250315170835376"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315170856790.png" alt="image-20250315170856790"></p>
+<h2 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h2><h3 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315170944127.png" alt="image-20250315170944127"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315171350999.png" alt="image-20250315171350999"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315171422964.png" alt="image-20250315171422964"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315171810409.png" alt="image-20250315171810409"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315171837338.png" alt="image-20250315171837338"></p>
+<h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><h3 id="自动配置原理"><a href="#自动配置原理" class="headerlink" title="自动配置原理"></a>自动配置原理</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315171930325.png" alt="image-20250315171930325"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172131287.png" alt="image-20250315172131287"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172221802.png" alt="image-20250315172221802"></p>
+<h2 id="Spring框架中常见的注解"><a href="#Spring框架中常见的注解" class="headerlink" title="Spring框架中常见的注解"></a>Spring框架中常见的注解</h2><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172259543.png" alt="image-20250315172259543"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172355168.png" alt="image-20250315172355168"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172450015.png" alt="image-20250315172450015"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315172517946.png" alt="image-20250315172517946"></p>
+<h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h3 id="执行流程-1"><a href="#执行流程-1" class="headerlink" title="执行流程"></a>执行流程</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205009959.png" alt="image-20250315205009959"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205316968.png" alt="image-20250315205316968"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205350948.png" alt="image-20250315205350948"></p>
+<h3 id="延迟加载使用及原理"><a href="#延迟加载使用及原理" class="headerlink" title="延迟加载使用及原理"></a>延迟加载使用及原理</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205440085.png" alt="image-20250315205440085"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205751394.png" alt="image-20250315205751394"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205858778.png" alt="image-20250315205858778"></p>
+<h3 id="一级、二级缓存"><a href="#一级、二级缓存" class="headerlink" title="一级、二级缓存"></a>一级、二级缓存</h3><p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315205941257.png" alt="image-20250315205941257"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315210117991.png" alt="image-20250315210117991"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315210258425.png" alt="image-20250315210258425"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315210346816.png" alt="image-20250315210346816"></p>
+<p><img src="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/image-20250315210424008.png" alt="image-20250315210424008"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://Gentleshiao.github.io">Shi Jiahao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://gentleshiao.github.io/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/">http://gentleshiao.github.io/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://Gentleshiao.github.io" target="_blank">珈豪の学习仓库</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%90%8E%E7%AB%AF/">后端</a><a class="post-meta__tags" href="/tags/Spring/">Spring</a></div><div class="post_share"><div class="social-share" data-image="/img/web.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/03/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="微服务经典面试题"><img class="cover" src="/img/web.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">微服务经典面试题</div></div></a></div><div class="next-post pull-right"><a href="/2025/03/09/Java%E9%9B%86%E5%90%88%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Java集合经典面试题"><img class="cover" src="/img/java.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Java集合经典面试题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/11/04/web%E5%BC%80%E5%8F%91/" title="Web开发"><img class="cover" src="/img/web.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-04</div><div class="title">Web开发</div></div></a></div><div><a href="/2025/03/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="微服务经典面试题"><img class="cover" src="/img/web.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-16</div><div class="title">微服务经典面试题</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Shi Jiahao</div><div class="author-info__description">不为更多人看到,只为记录自己成长</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Gentleshiao"><i class="fab fa-github"></i><span>Follow My Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Gentleshiao" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://git.nju.edu.cn/users/221250141/contributed" target="_blank" title="Gitlab"><i class="fab fa-gitlab" style="color: #fc6d26;"></i></a><a class="social-icon" href="mailto:112650310@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">珈豪の学习仓库持续发布后端开发相关知识与技术文档，敬请期待~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">后端框架经典面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring"><span class="toc-number">1.1.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8Bbean%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E5%90%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">单例bean是线程安全的吗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AOP%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-number">1.1.2.</span> <span class="toc-text">AOP相关面试题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E5%A4%B1%E6%95%88%E7%9A%84%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.3.</span> <span class="toc-text">事务失效的场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.4.</span> <span class="toc-text">bean的生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bean%E7%9A%84%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96%EF%BC%88%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%EF%BC%89"><span class="toc-number">1.1.5.</span> <span class="toc-text">bean的循环依赖（循环引用）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringMVC"><span class="toc-number">1.2.</span> <span class="toc-text">SpringMVC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">执行流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot"><span class="toc-number">1.3.</span> <span class="toc-text">SpringBoot</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.1.</span> <span class="toc-text">自动配置原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring%E6%A1%86%E6%9E%B6%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.4.</span> <span class="toc-text">Spring框架中常见的注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyBatis"><span class="toc-number">1.5.</span> <span class="toc-text">MyBatis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">执行流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="toc-number">1.5.2.</span> <span class="toc-text">延迟加载使用及原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E3%80%81%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98"><span class="toc-number">1.5.3.</span> <span class="toc-text">一级、二级缓存</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="微服务经典面试题"><img src="/img/web.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微服务经典面试题"/></a><div class="content"><a class="title" href="/2025/03/16/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="微服务经典面试题">微服务经典面试题</a><time datetime="2025-03-16T13:24:01.000Z" title="发表于 2025-03-16 21:24:01">2025-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="后端框架经典面试题"><img src="/img/web.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="后端框架经典面试题"/></a><div class="content"><a class="title" href="/2025/03/16/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="后端框架经典面试题">后端框架经典面试题</a><time datetime="2025-03-16T13:22:01.000Z" title="发表于 2025-03-16 21:22:01">2025-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/09/Java%E9%9B%86%E5%90%88%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Java集合经典面试题"><img src="/img/java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java集合经典面试题"/></a><div class="content"><a class="title" href="/2025/03/09/Java%E9%9B%86%E5%90%88%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Java集合经典面试题">Java集合经典面试题</a><time datetime="2025-03-09T12:22:01.000Z" title="发表于 2025-03-09 20:22:01">2025-03-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/02/Redis%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Redis经典面试题"><img src="/img/redis.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis经典面试题"/></a><div class="content"><a class="title" href="/2025/03/02/Redis%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="Redis经典面试题">Redis经典面试题</a><time datetime="2025-03-02T13:22:01.000Z" title="发表于 2025-03-02 21:22:01">2025-03-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/01/MySQL%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="MySQL经典面试题"><img src="/img/mysql.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL经典面试题"/></a><div class="content"><a class="title" href="/2025/03/01/MySQL%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/" title="MySQL经典面试题">MySQL经典面试题</a><time datetime="2025-03-01T13:22:01.000Z" title="发表于 2025-03-01 21:22:01">2025-03-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/web.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Shi Jiahao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":240,"height":480},"mobile":{"show":true},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false,"tagMode":false});</script></body></html>
